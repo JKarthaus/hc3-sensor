@@ -94,4 +94,11 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except:
+        logging.info("---------------------------------------------")
+        logging.info("-- CRITICAL ERROR OCCURED...")
+        logging.info("---------------------------------------------")
+        time.sleep(5)
+        sys.exit(2)
